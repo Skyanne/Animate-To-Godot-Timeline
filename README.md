@@ -32,18 +32,18 @@ Click "Open XML File", and select your XML file. The XML data will be injected i
 # Parsing at runtime
 The plugin also comes with an API for parsing the XML files at runtime.
 
-`ATTUtils.parse_atlas_xml("XMLPATH")`
+```ATTUtils.parse_atlas_xml("XMLPATH")```
 
 This function, will parse the XML data into a dictionary which you can do whatever you like with.
 
-`ATTUtils.atlas_xml_to_timelines("XMLPATH")`
+```ATTUtils.atlas_xml_to_timelines("XMLPATH")```
 
 This function will generate a dictionary containing the animation name and animation data. There are two optional parameters you can use. Those are `crop_buffer` which is a Rect2 and `animation_fps` which is an integer. The crop buffer dictates the rect of the crop region. The animation FPS will set the FPS of the animation.
 
 Accessing the animations is as simple as
 
 ```
-var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")`
+var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")
 var animation_data
 for animation in animations:
   animation_data.append(animation.data)
@@ -51,4 +51,9 @@ for animation in animations:
 
 # Saving XML animations as resource files
 The following code will save the XML animations as resources in the desired destination folder
-![image](https://user-images.githubusercontent.com/112031679/207200305-69ede627-105c-4e53-9e77-f3560993755a.png)
+```
+func save_animations_from_character_xml():
+	var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")
+	for animation in animations:
+		var _saved_file = ResourceSaver.save("EXPORT PATH" + animation.name + ".tres", animation.data)
+```
