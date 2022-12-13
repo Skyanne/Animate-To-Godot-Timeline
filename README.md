@@ -42,14 +42,12 @@ This function will generate a dictionary containing the animation name and anima
 
 Accessing the animations is as simple as
 
-`var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")`
-
-`var animation_data`
-
-`for animation in animations:`
-
-  `animation_data.append(animation.data)`
-
+```
+var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")`
+var animation_data
+for animation in animations:
+  animation_data.append(animation.data)
+```
 
 # Saving XML animations as resource files
 The following code will save the XML animations as resources in the desired destination folder
