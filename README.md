@@ -28,3 +28,19 @@ Set your required parameters.
 Click "Open XML File", and select your XML file. The XML data will be injected into the animation player perfectly.
 
 ![image](https://user-images.githubusercontent.com/112031679/207199637-6326ec5d-4794-4069-936b-794f0cd5ef32.png)
+
+# Parsing at runtime
+The plugin also comes with an API for parsing the XML files at runtime.
+
+`parse_atlas_xml(xml)`
+This function, accessible through "ATTUtils.parse_atlas_xml("XMLPATH") will parse the XML data into a dictionary which you can do whatever you like with.
+
+`atlas_xml_to_timelines(xml_path, crop_buffer = Rect2(5, 5, 5, 10), animation_fps = int(24))`
+This function, accesible through "ATTUtils.atlas_xml_to_timelines(xml_path, crop_buffer = Rect2(5, 5, 5, 10), animation_fps = int(24)) will generate a dictionary containing the animation name and animation data. The crop buffer dictates the rect of the crop region. The animation FPS is self explanatory, it will set the  FPS of the animation. Accessing the animations is as simple as
+`var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")
+for animation in animations:
+  var animation_data = animation.data`
+
+# Saving XML animations as resource files
+The following code will save the XML animations as resources in the desired destination folder
+![image](https://user-images.githubusercontent.com/112031679/207200305-69ede627-105c-4e53-9e77-f3560993755a.png)
