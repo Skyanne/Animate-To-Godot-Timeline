@@ -46,7 +46,7 @@ Accessing the animations is as simple as
 var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")
 var animation_data
 for animation in animations:
-  animation_data.append(animation.data)
+	animation_data.append(animation.data)
 ```
 
 # Saving XML animations as resource files
