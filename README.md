@@ -38,7 +38,7 @@ This function, accessible through "ATTUtils.parse_atlas_xml("XMLPATH") will pars
 
 `atlas_xml_to_timelines(xml_path, crop_buffer = Rect2(5, 5, 5, 10), animation_fps = int(24))`
 
-This function, accesible through "ATTUtils.atlas_xml_to_timelines(xml_path, crop_buffer = Rect2(5, 5, 5, 10), animation_fps = int(24)) will generate a dictionary containing the animation name and animation data. The crop buffer dictates the rect of the crop region. The animation FPS is self explanatory, it will set the  FPS of the animation. Accessing the animations is as simple as
+This function, accesible through `ATTUtils.atlas_xml_to_timelines(xml_path, crop_buffer = Rect2(5, 5, 5, 10), animation_fps = int(24))` will generate a dictionary containing the animation name and animation data. The crop buffer dictates the rect of the crop region. The animation FPS is self explanatory, it will set the  FPS of the animation. Accessing the animations is as simple as
 
 `var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")`
 
