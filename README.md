@@ -33,10 +33,13 @@ Click "Open XML File", and select your XML file. The XML data will be injected i
 The plugin also comes with an API for parsing the XML files at runtime.
 
 `parse_atlas_xml(xml)`
+
 This function, accessible through "ATTUtils.parse_atlas_xml("XMLPATH") will parse the XML data into a dictionary which you can do whatever you like with.
 
 `atlas_xml_to_timelines(xml_path, crop_buffer = Rect2(5, 5, 5, 10), animation_fps = int(24))`
+
 This function, accesible through "ATTUtils.atlas_xml_to_timelines(xml_path, crop_buffer = Rect2(5, 5, 5, 10), animation_fps = int(24)) will generate a dictionary containing the animation name and animation data. The crop buffer dictates the rect of the crop region. The animation FPS is self explanatory, it will set the  FPS of the animation. Accessing the animations is as simple as
+
 `var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")
 for animation in animations:
   var animation_data = animation.data`
