@@ -38,7 +38,7 @@ This function, will parse the XML data into a dictionary which you can do whatev
 
 ```ATTUtils.atlas_xml_to_timelines("XMLPATH")```
 
-This function will generate a dictionary containing the animation name and animation data. There are two optional parameters you can use. Those are `crop_buffer` which is a Rect2 and `animation_fps` which is an integer. The crop buffer dictates the rect of the crop region. The animation FPS will set the FPS of the animation.
+This function will generate a dictionary containing the animation name and animation data. There are two optional parameters you can use. Those are `crop_buffer` which is a Rect2 and `animation_fps` which is an integer. The crop buffer dictates the rect of the crop region and the animation FPS will set the FPS of the animation.
 
 Accessing the animations is as simple as
 
