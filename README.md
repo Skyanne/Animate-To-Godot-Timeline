@@ -52,8 +52,7 @@ for animation in animations:
 # Saving XML animations as resource files
 The following code will save the XML animations as resources in the desired destination folder
 ```
-func save_animations_from_character_xml():
-	var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")
-	for animation in animations:
-		var _saved_file = ResourceSaver.save("EXPORT PATH" + animation.name + ".tres", animation.data)
+var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")
+for animation in animations:
+	var _saved_file = ResourceSaver.save("EXPORT PATH" + animation.name + ".tres", animation.data)
 ```
