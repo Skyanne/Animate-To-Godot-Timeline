@@ -13,11 +13,11 @@ Firstly, create an animation player and set it's root node to your sprite.
 
 ![image](https://user-images.githubusercontent.com/112031679/207199747-3db12010-b661-48e4-95df-8d527581b5f0.png)
 
-Back in the menu that was created upon enabling the plugin, make sure your sprite has region enabled like so.
+Make sure your sprite has region enabled like so.
 
 ![image](https://user-images.githubusercontent.com/112031679/207199813-9b4b7141-0e20-4c15-9f99-d4af9dcef6fc.png)
 
-Simply replace the text in this box with your animation player name.
+Back in the menu that was created upon enabling the plugin, simply replace the text in this box with your animation player name.
 
 ![image](https://user-images.githubusercontent.com/112031679/207199585-1c669064-4c34-41d8-8d91-4f1c6df78967.png)
 
