@@ -38,7 +38,7 @@ This function, will parse the XML data into a dictionary which you can do whatev
 
 `ATTUtils.atlas_xml_to_timelines("XMLPATH")`
 
-This function will generate a dictionary containing the animation name and animation data. There are optional parameters such as
+This function will generate a dictionary containing the animation name and animation data. There are two optional parameters you can use.
 
 `crop_buffer` 
 
