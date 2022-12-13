@@ -1,0 +1,219 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/animate_to_timeline/xml_dock.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.337255, 0.364706, 0.427451, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.2, 0.227451, 0.309804, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.12549, 0.141176, 0.192157, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.2, 0.227451, 0.309804, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.14902, 0.172549, 0.231373, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.2, 0.227451, 0.309804, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.14902, 0.172549, 0.231373, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.2, 0.227451, 0.309804, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[node name="Animate to Timeline" type="PanelContainer"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 298.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+
+[node name="BG" type="ColorRect" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 291.0
+margin_bottom = 393.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.14902, 0.172549, 0.231373, 1 )
+
+[node name="FileDialog" type="FileDialog" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 291.0
+margin_bottom = 393.0
+popup_exclusive = true
+window_title = "Open an XML file"
+resizable = true
+mode_overrides_title = false
+mode = 0
+filters = PoolStringArray( "*.xml ; Adobe Animate XML files" )
+show_hidden_files = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 291.0
+margin_bottom = 393.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 284.0
+margin_bottom = 270.0
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/HBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 3.0
+margin_bottom = 270.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 7.0
+margin_right = 277.0
+margin_bottom = 270.0
+size_flags_horizontal = 3
+custom_constants/separation = 5
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 270.0
+margin_bottom = 5.0
+rect_min_size = Vector2( 0, 5 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 10.0
+margin_right = 270.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="XML" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_right = 270.0
+margin_bottom = 20.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+shortcut_in_tooltip = false
+text = "Open XML File"
+
+[node name="AnimationPlayerInput" type="TextEdit" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 35.0
+margin_right = 270.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 35 )
+hint_tooltip = "Animation Player Name"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = SubResource( 5 )
+text = "AnimationPlayer"
+
+[node name="CropBufferLeft" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 75.0
+margin_right = 270.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 0, 35 )
+hint_tooltip = "Animation Player Name"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+step = 0.1
+allow_greater = true
+allow_lesser = true
+prefix = "Crop Buffer Left:"
+
+[node name="CropBufferUp" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 115.0
+margin_right = 270.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 0, 35 )
+hint_tooltip = "Animation Player Name"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+step = 0.1
+allow_greater = true
+allow_lesser = true
+prefix = "Crop Buffer Up:"
+
+[node name="CropBufferRight" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 155.0
+margin_right = 270.0
+margin_bottom = 190.0
+rect_min_size = Vector2( 0, 35 )
+hint_tooltip = "Animation Player Name"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+step = 0.1
+allow_greater = true
+allow_lesser = true
+prefix = "Crop Buffer Right:"
+
+[node name="CropBufferDown" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 195.0
+margin_right = 270.0
+margin_bottom = 230.0
+rect_min_size = Vector2( 0, 35 )
+hint_tooltip = "Animation Player Name"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+step = 0.1
+allow_greater = true
+allow_lesser = true
+prefix = "Crop Buffer Down:"
+
+[node name="FPS" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 235.0
+margin_right = 270.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 0, 35 )
+hint_tooltip = "Animation Player Name"
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 24.0
+rounded = true
+allow_greater = true
+allow_lesser = true
+prefix = "FPS:"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/HBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 281.0
+margin_right = 284.0
+margin_bottom = 270.0
+
+[connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/XML" to="." method="_on_XML_pressed"]
+[connection signal="text_changed" from="VBoxContainer/HBoxContainer/VBoxContainer/AnimationPlayerInput" to="." method="_on_AnimationPlayerInput_text_changed"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/VBoxContainer/CropBufferLeft" to="." method="_on_CropBufferLeft_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/VBoxContainer/CropBufferUp" to="." method="_on_CropBufferUp_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/VBoxContainer/CropBufferRight" to="." method="_on_CropBufferRight_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/VBoxContainer/CropBufferDown" to="." method="_on_CropBufferDown_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/VBoxContainer/FPS" to="." method="_on_FPS_value_changed"]
