@@ -40,9 +40,15 @@ This function, accessible through "ATTUtils.parse_atlas_xml("XMLPATH") will pars
 
 This function, accesible through "ATTUtils.atlas_xml_to_timelines(xml_path, crop_buffer = Rect2(5, 5, 5, 10), animation_fps = int(24)) will generate a dictionary containing the animation name and animation data. The crop buffer dictates the rect of the crop region. The animation FPS is self explanatory, it will set the  FPS of the animation. Accessing the animations is as simple as
 
-`var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")
-for animation in animations:
-  var animation_data = animation.data`
+`var animations = ATTUtils.atlas_xml_to_timelines("XMLPATH")`
+
+and then
+
+`var animation_data`
+
+and finally
+
+`for animation in animations: animation_data.append(animation.data)`
 
 # Saving XML animations as resource files
 The following code will save the XML animations as resources in the desired destination folder
