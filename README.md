@@ -1,6 +1,9 @@
 # Animate-To-Godot-Timeline
 A Godot plugin that converts Adobe Animate sprite atlas XML files to animation timeline tracks.
 
+# Installing
+If your Godot project doesn't contain an "addons" folder, create one in the root directory then drag the "animate_to_timeline" into it, then in your project enable the plugin from "Project Settings/Plugins" by ticking the box that appears next to "Animate To Timeline"
+![image](https://user-images.githubusercontent.com/112031679/207203174-faf58ce5-e333-4699-ad83-07e5e6e88476.png)
 
 # Usage
 
