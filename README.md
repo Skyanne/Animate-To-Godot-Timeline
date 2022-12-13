@@ -44,7 +44,7 @@ This function will generate a dictionary containing the animation name and anima
 
 which is a Rect2, and
 
-`animation_fps = int(24))`
+`animation_fps`
 
 which is an integer.
 
